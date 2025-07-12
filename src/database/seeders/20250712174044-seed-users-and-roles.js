@@ -6,7 +6,6 @@ module.exports = {
     // Insertar usuarios de ejemplo
     await queryInterface.bulkInsert('users', [
       {
-        id: Sequelize.literal('UUID()'),
         nombre: 'Administrador',
         email: 'admin@example.com',
         password_hash: '$2a$10$abcdefghijklmnopqrstuvwxyz0123456789',
@@ -14,7 +13,6 @@ module.exports = {
         updated_at: new Date()
       },
       {
-        id: Sequelize.literal('UUID()'),
         nombre: 'Usuario Prueba',
         email: 'user@example.com',
         password_hash: '$2a$10$0123456789abcdefghijklmnopqrstuvwxyz',

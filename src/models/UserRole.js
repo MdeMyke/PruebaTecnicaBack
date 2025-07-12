@@ -3,7 +3,7 @@ const { sequelize } = require('../database/connection');
 
 const UserRole = sequelize.define('UserRole', {
   user_id: {
-    type: DataTypes.UUID,
+    type: DataTypes.INTEGER,
     allowNull: false,
     references: {
       model: 'users',
