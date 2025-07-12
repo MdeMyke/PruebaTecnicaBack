@@ -15,12 +15,14 @@ docker compose up -d
 docker compose down
 ```
 
+**⏱️ Nota importante:** La primera ejecución puede demorar varios minutos debido a la descarga de la imagen de MySQL. Esto es normal y solo ocurre la primera vez.
+
 ## 🛠️ Ejecutar localmente
 
 ### Prerrequisitos
 
-1. **Instalar Node.js** (versión 16 o superior)
-2. **Instalar MySQL Server** en tu sistema
+1. **Tener Node.js** (versión 16 o superior)
+2. **Tener MySQL Server** en tu sistema
 3. **Instalar Sequelize CLI** globalmente:
    ```bash
    npm install -g sequelize-cli

@@ -20,7 +20,7 @@ services:
       - DB_PORT=3306
       - DB_NAME=prueba_tecnica_db
       - DB_USER=root
-      - DB_PASS=root123
+      - DB_PASSWORD=root123
       - DB_DIALECT=mysql
     depends_on:
       - mysql
