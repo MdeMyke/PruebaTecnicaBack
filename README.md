@@ -106,6 +106,46 @@ npm run db:seed:undo
 
 La API incluye endpoints para gestión de usuarios y roles con operaciones CRUD completas.
 
+## 📁 Estructura del Proyecto
+
+```
+PruebaTecnicaBack/
+├── src/
+│   ├── controllers/          # Controladores de la API
+│   │   ├── user.controller.js
+│   │   └── role.controller.js
+│   ├── models/              # Modelos de Sequelize
+│   │   ├── User.js
+│   │   ├── Role.js
+│   │   ├── UserRole.js
+│   │   └── index.js
+│   ├── routes/              # Definición de rutas
+│   │   ├── index.js
+│   │   ├── user.routes.js
+│   │   └── role.routes.js
+│   ├── database/            # Configuración de base de datos
+│   │   ├── config.js
+│   │   ├── connection.js
+│   │   ├── migrations/      # Migraciones de Sequelize
+│   │   └── seeders/         # Datos de ejemplo
+│   └── assets/
+│       └── img/
+├── API_DOCUMENTATION.md     # Documentación completa de la API
+├── docker-compose.yml       # Configuración de Docker
+├── Dockerfile              # Imagen de Docker
+├── index.js                # Punto de entrada de la aplicación
+├── package.json            # Dependencias y scripts
+└── README.md               # Este archivo
+```
+
+### Descripción de carpetas:
+- **`controllers/`**: Lógica de negocio y manejo de requests/responses
+- **`models/`**: Definición de modelos de datos con Sequelize
+- **`routes/`**: Definición de endpoints y rutas de la API
+- **`database/`**: Configuración, migraciones y seeders de la base de datos
+- **`migrations/`**: Archivos para crear/modificar estructura de la BD
+- **`seeders/`**: Datos iniciales y de ejemplo para la base de datos
+
 ## 🗄️ Estructura de la Base de Datos
 
 ![Estructura de Base de Datos](src/assets/img/database-structure.png)
