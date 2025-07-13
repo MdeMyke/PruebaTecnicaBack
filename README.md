@@ -102,10 +102,9 @@ npm run db:seed:undo
 
 ## 📊 Endpoints
 
-- `GET /` - Información de la API
-- `GET /api/users` - Listar usuarios
-- `GET /api/roles` - Listar roles
-- `GET /api/users/:id` - Obtener usuario
+📖 **Documentación completa de la API:** [API_DOCUMENTATION.md](API_DOCUMENTATION.md)
+
+La API incluye endpoints para gestión de usuarios y roles con operaciones CRUD completas.
 
 ## 🗄️ Estructura de la Base de Datos
 
@@ -118,134 +117,9 @@ npm run db:seed:undo
 
 ## 🧪 Pruebas con Postman
 
-### Configuración inicial
+📖 **Documentación completa de la API:** [API_DOCUMENTATION.md](API_DOCUMENTATION.md)
 
-1. **Importar colección**: Descarga la colección de Postman desde `docs/postman-collection.json`
-2. **Configurar variables de entorno**:
-   - `port`: `3000`
-
-### Ejemplos de pruebas
-
-#### 1. Información de la API
-```http
-GET http://localhost:3000/
-```
-
-**Respuesta esperada:**
-```json
-{
-  "message": "API de Gestión de Usuarios",
-  "version": "1.0.0",
-  "status": "running"
-}
-```
-
-#### 2. Listar todos los usuarios
-```http
-GET http://localhost:3000/api/users
-```
-
-**Respuesta esperada:**
-```json
-{
-  "success": true,
-  "data": [
-    {
-      "id": 1,
-      "name": "Juan Pérez",
-      "email": "juan@example.com",
-      "createdAt": "2024-01-01T00:00:00.000Z",
-      "updatedAt": "2024-01-01T00:00:00.000Z",
-      "roles": [
-        {
-          "id": 1,
-          "name": "admin",
-          "description": "Administrador del sistema"
-        }
-      ]
-    }
-  ]
-}
-```
-
-#### 3. Obtener usuario por ID
-```http
-GET http://localhost:3000/api/users/1
-```
-
-**Respuesta esperada:**
-```json
-{
-  "success": true,
-  "data": {
-    "id": 1,
-    "name": "Juan Pérez",
-    "email": "juan@example.com",
-    "createdAt": "2024-01-01T00:00:00.000Z",
-    "updatedAt": "2024-01-01T00:00:00.000Z",
-    "roles": [
-      {
-        "id": 1,
-        "name": "admin",
-        "description": "Administrador del sistema"
-      }
-    ]
-  }
-}
-```
-
-#### 4. Listar todos los roles
-```http
-GET http://localhost:3000/api/roles
-```
-
-**Respuesta esperada:**
-```json
-{
-  "success": true,
-  "data": [
-    {
-      "id": 1,
-      "name": "admin",
-      "description": "Administrador del sistema",
-      "createdAt": "2024-01-01T00:00:00.000Z",
-      "updatedAt": "2024-01-01T00:00:00.000Z"
-    },
-    {
-      "id": 2,
-      "name": "user",
-      "description": "Usuario regular",
-      "createdAt": "2024-01-01T00:00:00.000Z",
-      "updatedAt": "2024-01-01T00:00:00.000Z"
-    }
-  ]
-}
-```
-
-### Casos de error
-
-#### Usuario no encontrado
-```http
-GET http://localhost:3000/api/users/999
-```
-
-**Respuesta esperada:**
-```json
-{
-  "success": false,
-  "message": "Usuario no encontrado"
-}
-```
-
-#### Servidor no disponible
-```http
-GET http://localhost:3000/api/users
-```
-
-**Respuesta esperada:**
-```
-Error: connect ECONNREFUSED 127.0.0.1:3000
-```
+La documentación incluye ejemplos detallados de todas las operaciones, códigos de respuesta y casos de uso.
 
 
 ## 🔧 Solución de problemas
